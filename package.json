@@ -1,0 +1,20 @@
+{
+    "name": "self-service-backend",
+    "version": "0.0.1",
+    "dependencies": {
+        "auth0-extension-tools": "^1.2.1",
+        "body-parser": "^1.17.2",
+        "request-promise": "^4.2.1",
+        "webtask-tools": "^3.2.0"
+    },
+    "devDependencies": {
+        "babel-core": "^6.25.0",
+        "babel-loader": "^7.0.0",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-preset-env": "^1.5.2"
+    },
+    "scripts": {
+        "start": "yarn build && node ./wt/dist/bundle.js",
+        "build": "webpack -p --config ./wt/webpack.config.js"
+    }
+}
